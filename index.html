@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PR1 web-survey UI</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/sandbox.js"></script>
+</head>
+<body>
+
+    <!-- web background below-->
+
+    <div class="video-container">
+        <video autoplay muted loop id="video">
+            <source src="media/survey_background_1.mp4" type="video/mp4" />
+        </video>
+    </div>
+
+    <!-- survey title below-->
+
+    <div class="container">
+        <h1 id="title" class="text-center">User Experience Survey Form</h1>
+        <p id="description" class="description text-center">
+          Be part of our success by helping us improve our site!
+        </p>
+    
+    <!-- name/email/age section below-->
+
+        <form id="survey-form" class="text-center">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your full name goes here"
+                    required
+                        />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="And here goes your email"
+                    required
+                        />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age (optional)</label>
+                <input
+                    type="number"
+                    name="age"
+                    id="number"
+                    min="18"
+                    max="99"
+                    class="form-control"
+                    placeholder="Age"
+                        />
+            </div>
+
+    <!-- role section below-->
+
+            <div class="form-group">
+                <p>What role identifies you the most?
+                </p>
+                <select id="dropdown" name="role" required>
+                    <option disabled selected value>Select your role</option>
+                    <option value="student">Hip-Hop Enthusiast</option>
+                    <option value="job">Rock 'n' Roll Melancholic</option>
+                    <option value="learner">Metalhead</option>
+                    <option value="preferNo">Hawaiian tunes Listener</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+    <!-- recommend section below-->
+
+            <div class="form-group">
+                <p>Would you recommend freeMusicJam to a friend?</p>
+                <label>
+                    <input
+                    name="user-recommend"
+                    value="YES!"
+                    type="radio"
+                    class="input-radio"
+                    checked
+                    />YES!</label>
+                <label>
+                    <input
+                    name="user-recommend"
+                    value="nah"
+                    type="radio"
+                    class="input-radio"
+                    />nah</label>
+                <label>
+                    <input
+                    name="user-recommend"
+                    value="Maybe?"
+                    type="radio"
+                    class="input-radio"
+                    />Maybe?</label>
+            </div>
+    
+    <!-- feature section below-->
+
+            <div class="form-group">
+                <p>What is your favorite feature of freeMusicJam?</p>
+                <select  name="favfeature" id="fav-feature" class="form-control" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="challenges">Curated Playlists</option>
+                    <option value="projects">Music Recommendations</option>
+                    <option value="community">Karaoke Mode</option>
+                    <option value="openSource">The Community!</option>
+                </select>
+            </div>
+
+    <!-- improvements section below-->
+
+            <div class="form-group">
+            <p>Where can we improve? (You can choose many)</p>
+                <label>
+                <input
+                name="prefer"
+                value="better-interface"
+                type="checkbox"
+                class="input-checkbox"
+                />Better interface</label>
+                <label>
+                <input
+                name="prefer"
+                value="music-quality"
+                type="checkbox"
+                class="input-checkbox"
+                />Music quality</label>
+                <label
+                ><input
+                name="prefer"
+                value="more-playlists-options"
+                type="checkbox"
+                class="input-checkbox"
+                />More playlists options</label>
+                <label
+                ><input
+                name="prefer"
+                value="add-podcasts"
+                type="checkbox"
+                class="input-checkbox"
+                />Add podcasts</label>
+                <label
+                ><input
+                name="prefer"
+                value="link-to-social-media"
+                type="checkbox"
+                class="input-checkbox"
+                />Link to social media</label>
+    
+    <!-- text suggestion below-->
+
+            <div class="form-group">
+            <p>More suggestions?</p>
+            <textarea
+                id="comments"
+                class="textarea"
+                name="comment"
+                placeholder="&#10;Your thoughts go here..."
+            ></textarea>
+            </div>
+        
+            <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+                Done!
+            </button>
+            </div>
+
+        </form>
+    </div>
+      
+</body>
+</html>
